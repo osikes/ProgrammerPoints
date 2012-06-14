@@ -1,5 +1,5 @@
 //
-//  IdiotEntity.h
+//  PPIdiot.h
 //  ProgrammerPoints
 //
 //  Created by wodom on 6/14/12.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface IdiotEntity : NSObject
+@interface PPIdiot : NSObject
 
 @end

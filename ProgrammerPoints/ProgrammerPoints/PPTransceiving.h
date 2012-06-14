@@ -1,5 +1,5 @@
 //
-//  PointCollection.h
+//  PPTransceiving.h
 //  ProgrammerPoints
 //
 //  Created by wodom on 6/14/12.
@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PointCollection : NSObject
+@interface PPTransceiving : NSObject
 
 @end

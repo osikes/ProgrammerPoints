@@ -1,13 +1,13 @@
 //
-//  PointEntity.m
+//  PPService.h
 //  ProgrammerPoints
 //
 //  Created by wodom on 6/14/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "PointEntity.h"
+#import <Foundation/Foundation.h>
 
-@implementation PointEntity
+@interface PPService : NSObject
 
 @end
