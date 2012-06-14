@@ -18,6 +18,10 @@
 		1CBE3979158A61BE006EAFB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBE3960158A61BE006EAFB8 /* Foundation.framework */; };
 		1CBE3981158A61BE006EAFB8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1CBE397F158A61BE006EAFB8 /* InfoPlist.strings */; };
 		1CBE3984158A61BE006EAFB8 /* ProgrammerPointsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE3983158A61BE006EAFB8 /* ProgrammerPointsTests.m */; };
+		1CBE3992158A66CE006EAFB8 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CBE3991158A66CE006EAFB8 /* MainStoryboard.storyboard */; };
+		1CBE399F158A743E006EAFB8 /* IdiotEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE399E158A743E006EAFB8 /* IdiotEntity.m */; };
+		1CBE39A2158A7450006EAFB8 /* PointEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE39A1158A7450006EAFB8 /* PointEntity.m */; };
+		1CBE39A5158A7463006EAFB8 /* PointCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE39A4158A7463006EAFB8 /* PointCollection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,13 @@
 		1CBE3980158A61BE006EAFB8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1CBE3982158A61BE006EAFB8 /* ProgrammerPointsTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProgrammerPointsTests.h; sourceTree = "<group>"; };
 		1CBE3983158A61BE006EAFB8 /* ProgrammerPointsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProgrammerPointsTests.m; sourceTree = "<group>"; };
+		1CBE3991158A66CE006EAFB8 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		1CBE399D158A743E006EAFB8 /* IdiotEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdiotEntity.h; sourceTree = "<group>"; };
+		1CBE399E158A743E006EAFB8 /* IdiotEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdiotEntity.m; sourceTree = "<group>"; };
+		1CBE39A0158A7450006EAFB8 /* PointEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointEntity.h; sourceTree = "<group>"; };
+		1CBE39A1158A7450006EAFB8 /* PointEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointEntity.m; sourceTree = "<group>"; };
+		1CBE39A3158A7463006EAFB8 /* PointCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointCollection.h; sourceTree = "<group>"; };
+		1CBE39A4158A7463006EAFB8 /* PointCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointCollection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +117,13 @@
 		1CBE3964158A61BE006EAFB8 /* ProgrammerPoints */ = {
 			isa = PBXGroup;
 			children = (
+				1CBE399C158A73E2006EAFB8 /* Concrete */,
+				1CBE399B158A73CB006EAFB8 /* Abstract */,
+				1CBE3998158A6E1B006EAFB8 /* Entities */,
 				1CBE396D158A61BE006EAFB8 /* AppDelegate.h */,
 				1CBE396E158A61BE006EAFB8 /* AppDelegate.m */,
 				1CBE3965158A61BE006EAFB8 /* Supporting Files */,
+				1CBE3991158A66CE006EAFB8 /* MainStoryboard.storyboard */,
 			);
 			path = ProgrammerPoints;
 			sourceTree = "<group>";
@@ -141,6 +156,33 @@
 				1CBE397F158A61BE006EAFB8 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1CBE3998158A6E1B006EAFB8 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1CBE399D158A743E006EAFB8 /* IdiotEntity.h */,
+				1CBE399E158A743E006EAFB8 /* IdiotEntity.m */,
+				1CBE39A0158A7450006EAFB8 /* PointEntity.h */,
+				1CBE39A1158A7450006EAFB8 /* PointEntity.m */,
+				1CBE39A3158A7463006EAFB8 /* PointCollection.h */,
+				1CBE39A4158A7463006EAFB8 /* PointCollection.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		1CBE399B158A73CB006EAFB8 /* Abstract */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Abstract;
+			sourceTree = "<group>";
+		};
+		1CBE399C158A73E2006EAFB8 /* Concrete */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Concrete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CBE3969158A61BE006EAFB8 /* InfoPlist.strings in Resources */,
+				1CBE3992158A66CE006EAFB8 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +293,9 @@
 			files = (
 				1CBE396B158A61BE006EAFB8 /* main.m in Sources */,
 				1CBE396F158A61BE006EAFB8 /* AppDelegate.m in Sources */,
+				1CBE399F158A743E006EAFB8 /* IdiotEntity.m in Sources */,
+				1CBE39A2158A7450006EAFB8 /* PointEntity.m in Sources */,
+				1CBE39A5158A7463006EAFB8 /* PointCollection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +457,7 @@
 				1CBE3989158A61BE006EAFB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CBE398A158A61BE006EAFB8 /* Build configuration list for PBXNativeTarget "ProgrammerPointsTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +466,7 @@
 				1CBE398C158A61BE006EAFB8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
