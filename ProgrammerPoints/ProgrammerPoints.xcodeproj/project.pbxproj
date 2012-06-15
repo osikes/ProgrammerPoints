@@ -23,7 +23,6 @@
 		1CBE39AE158A78A1006EAFB8 /* PPCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE39AD158A78A1006EAFB8 /* PPCollection.m */; };
 		1CBE39B1158A78AC006EAFB8 /* PPPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE39B0158A78AC006EAFB8 /* PPPoint.m */; };
 		1CBE39B4158A78D0006EAFB8 /* PPIdiot.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE39B3158A78D0006EAFB8 /* PPIdiot.m */; };
-		1CBE39B7158A79B7006EAFB8 /* PPTransceiving.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CBE39B6158A79B7006EAFB8 /* PPTransceiving.m */; };
 		1CC415FE158B83FB00ED1A93 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC415F8158B83FB00ED1A93 /* bg.png */; };
 		1CC415FF158B83FB00ED1A93 /* dot.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC415F9158B83FB00ED1A93 /* dot.png */; };
 		1CC41600158B83FB00ED1A93 /* leaderboard.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CC415FA158B83FB00ED1A93 /* leaderboard.png */; };
@@ -70,8 +69,7 @@
 		1CBE39B0158A78AC006EAFB8 /* PPPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPoint.m; sourceTree = "<group>"; };
 		1CBE39B2158A78D0006EAFB8 /* PPIdiot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPIdiot.h; sourceTree = "<group>"; };
 		1CBE39B3158A78D0006EAFB8 /* PPIdiot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPIdiot.m; sourceTree = "<group>"; };
-		1CBE39B5158A79B7006EAFB8 /* PPTransceiving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPTransceiving.h; sourceTree = "<group>"; };
-		1CBE39B6158A79B7006EAFB8 /* PPTransceiving.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPTransceiving.m; sourceTree = "<group>"; };
+		1CBE39B5158A79B7006EAFB8 /* PPRequesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRequesting.h; sourceTree = "<group>"; };
 		1CC415F8158B83FB00ED1A93 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		1CC415F9158B83FB00ED1A93 /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
 		1CC415FA158B83FB00ED1A93 /* leaderboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaderboard.png; sourceTree = "<group>"; };
@@ -80,6 +78,7 @@
 		1CC415FD158B83FB00ED1A93 /* tri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tri.png; sourceTree = "<group>"; };
 		1CC41606158B865000ED1A93 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
 		1CC41607158B865000ED1A93 /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
+		EF25BCB1158BB3960037E886 /* PPReceiving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPReceiving.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,8 +197,8 @@
 		1CBE399B158A73CB006EAFB8 /* Abstract */ = {
 			isa = PBXGroup;
 			children = (
-				1CBE39B5158A79B7006EAFB8 /* PPTransceiving.h */,
-				1CBE39B6158A79B7006EAFB8 /* PPTransceiving.m */,
+				1CBE39B5158A79B7006EAFB8 /* PPRequesting.h */,
+				EF25BCB1158BB3960037E886 /* PPReceiving.h */,
 			);
 			name = Abstract;
 			sourceTree = "<group>";
@@ -355,7 +354,6 @@
 				1CBE39AE158A78A1006EAFB8 /* PPCollection.m in Sources */,
 				1CBE39B1158A78AC006EAFB8 /* PPPoint.m in Sources */,
 				1CBE39B4158A78D0006EAFB8 /* PPIdiot.m in Sources */,
-				1CBE39B7158A79B7006EAFB8 /* PPTransceiving.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
