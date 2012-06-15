@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PPPoint.h"
 
 @interface PPCollection : NSObject
 {
@@ -21,7 +22,7 @@
 
 
 - (PPCollection *) initEmptyCollection;
-- (BOOL) addPoint;
+- (BOOL) addPoint:(PPPoint *) point;
 - (BOOL) flush; // gets rid of all the PP in the "collection"
 
 @end
