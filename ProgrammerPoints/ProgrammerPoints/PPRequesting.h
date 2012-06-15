@@ -10,7 +10,7 @@
 #import "PPIdiot.h"
 #import "PPPoint.h"
 
-@protocol PPTransceiving <NSObject>
+@protocol PPRequesting <NSObject>
 
 - (NSMutableArray *)GetIdiots;
 - (PPIdiot *)GetIdiotWWithFirstName:(NSString *)firstName lastName:(NSString *)lastName;
