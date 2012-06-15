@@ -13,13 +13,13 @@
 @protocol PPTransceiving <NSObject>
 
 - (NSMutableArray *)GetIdiots;
-- (PPIdiot *)GetIdiotFirstName:(NSString *)firstName LastName:(NSString *)lastName;
-- (BOOL)AddIdiotFirstName:(NSString *)firstName LastName:(NSString *)lastName;
-- (BOOL)RemoveIdiotByID:(NSString *)idiotID;
-- (BOOL)AddStupidPointID:(NSString *)idiotID Point:(PPPoint *) point;
-- (BOOL)AddSmartPointID:(NSString *)idiotID Point:(PPPoint *) point;
-- (BOOL)ResetPoints;
-- (BOOL)ResetPointsID:(NSString *)idiotID;
+- (PPIdiot *)GetIdiotWWithFirstName:(NSString *)firstName lastName:(NSString *)lastName;
+- (BOOL)AddIdiotWithFirstName:(NSString *)firstName lastName:(NSString *)lastName;
+- (BOOL)RemoveIdiotWithID:(NSString *)idiotID;
+- (BOOL)AddStupidPoint:(PPPoint *) point toIdiot:(NSString *) idiotID;
+- (BOOL)AddSmartPoint:(PPPoint *) point toIdiot:(NSString *) idiotID;
+- (BOOL)ResetAllPoints;
+- (BOOL)ResetPointsFromID:(NSString *)idiotID;
 
 
 @end
