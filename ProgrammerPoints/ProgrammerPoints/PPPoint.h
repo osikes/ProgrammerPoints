@@ -9,6 +9,21 @@
 #import <Foundation/Foundation.h>
 
 @interface PPPoint : NSObject
+{
+    NSString *id;
+    NSDate *date; // use http://stackoverflow.com/questions/1684904/getting-current-time-in-string-in-custom-format-in-objective-c
+    NSString *description;
+    int value;
+}
+
+@property (nonatomic, retain) NSString *id;
+@property (nonatomic, retain) NSDate *date;
+@property (nonatomic, retain) NSString *description;
+@property int value;
+
+- (PPPoint *) initWithoutDetails;
+- (PPPoint *) initWithDate: (NSDate *)date description: (NSString *)description value:(int)value;
+
 
 @end
 
