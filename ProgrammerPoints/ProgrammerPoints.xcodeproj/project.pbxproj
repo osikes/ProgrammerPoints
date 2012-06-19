@@ -103,7 +103,7 @@
 		1CBE396A158A61BE006EAFB8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1CBE396C158A61BE006EAFB8 /* ProgrammerPoints-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ProgrammerPoints-Prefix.pch"; sourceTree = "<group>"; };
 		1CBE396D158A61BE006EAFB8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		1CBE396E158A61BE006EAFB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1CBE396E158A61BE006EAFB8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; wrapsLines = 1; };
 		1CBE3975158A61BE006EAFB8 /* ProgrammerPointsTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProgrammerPointsTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBE3976158A61BE006EAFB8 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		1CBE397E158A61BE006EAFB8 /* ProgrammerPointsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ProgrammerPointsTests-Info.plist"; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		1CBE39B0158A78AC006EAFB8 /* PPPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPPoint.m; sourceTree = "<group>"; };
 		1CBE39B2158A78D0006EAFB8 /* PPIdiot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPIdiot.h; sourceTree = "<group>"; };
 		1CBE39B3158A78D0006EAFB8 /* PPIdiot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPIdiot.m; sourceTree = "<group>"; };
-		1CBE39B5158A79B7006EAFB8 /* PPRequesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRequesting.h; sourceTree = "<group>"; };
+		1CBE39B5158A79B7006EAFB8 /* PPRequesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPRequesting.h; sourceTree = "<group>"; wrapsLines = 1; };
 		1CC415F8158B83FB00ED1A93 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		1CC415F9158B83FB00ED1A93 /* dot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dot.png; sourceTree = "<group>"; };
 		1CC415FA158B83FB00ED1A93 /* leaderboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leaderboard.png; sourceTree = "<group>"; };

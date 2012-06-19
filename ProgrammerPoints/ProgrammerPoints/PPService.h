@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <RestKit/RestKit.h>
+#import "PPRequesting.h"
 
-@interface PPService : NSObject
+@interface PPService : NSObject <RKRequestDelegate, PPRequesting>
 
 @end
