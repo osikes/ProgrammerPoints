@@ -218,8 +218,6 @@
 				1CBE396D158A61BE006EAFB8 /* AppDelegate.h */,
 				1CBE396E158A61BE006EAFB8 /* AppDelegate.m */,
 				1CBE3991158A66CE006EAFB8 /* MainStoryboard.storyboard */,
-				1CC41605158B865000ED1A93 /* Fonts */,
-				1CC415F7158B83FB00ED1A93 /* Images */,
 				1CBE3965158A61BE006EAFB8 /* Supporting Files */,
 			);
 			path = ProgrammerPoints;
@@ -228,6 +226,8 @@
 		1CBE3965158A61BE006EAFB8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1CC415F7158B83FB00ED1A93 /* Images */,
+				1CC41605158B865000ED1A93 /* Fonts */,
 				1CBE3966158A61BE006EAFB8 /* ProgrammerPoints-Info.plist */,
 				1CBE3967158A61BE006EAFB8 /* InfoPlist.strings */,
 				1CBE396A158A61BE006EAFB8 /* main.m */,
