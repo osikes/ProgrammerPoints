@@ -13,14 +13,14 @@
 
 @protocol PPRequesting <NSObject>
 
-- getIdiotsNotify:(PPReceiving *) receiver;
-- getIdiotWWithFirstName:(NSString *)firstName LastName:(NSString *)lastName Notify:(PPReceiving *) receiver;
-- addIdiotWithFirstName:(NSString *)firstName LastName:(NSString *)lastName Notify:(PPReceiving *) receiver;
-- removeIdiotWithID:(NSString *)idiotID Notify:(PPReceiving *) receiver;
-- addStupidPoint:(PPPoint *) point ToIdiot:(NSString *) idiotID Notify:(PPReceiving *) receiver;
-- addSmartPoint:(PPPoint *) point ToIdiot:(NSString *) idiotID Notify:(PPReceiving *) receiver;
-- resetAllPointsNotify:(PPReceiving *) receiver;
-- resetPointsFromID:(NSString *)idiotID Notify:(PPReceiving *) receiver;
+//- getIdiotsNotify:(PPReceiving *) receiver;
+//- getIdiotWWithFirstName:(NSString *)firstName LastName:(NSString *)lastName Notify:(PPReceiving *) receiver;
+//- addIdiotWithFirstName:(NSString *)firstName LastName:(NSString *)lastName Notify:(PPReceiving *) receiver;
+//- removeIdiotWithID:(NSString *)idiotID Notify:(PPReceiving *) receiver;
+//- addStupidPoint:(PPPoint *) point ToIdiot:(NSString *) idiotID Notify:(PPReceiving *) receiver;
+//- addSmartPoint:(PPPoint *) point ToIdiot:(NSString *) idiotID Notify:(PPReceiving *) receiver;
+//- resetAllPointsNotify:(PPReceiving *) receiver;
+//- resetPointsFromID:(NSString *)idiotID Notify:(PPReceiving *) receiver;
 
 
 @end

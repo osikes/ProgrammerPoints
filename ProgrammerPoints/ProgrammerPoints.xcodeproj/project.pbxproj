@@ -135,7 +135,7 @@
 		1CD840BC15921A8200B79763 /* PPGridTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPGridTableCell.m; sourceTree = "<group>"; };
 		1CF3597315922BD700161E33 /* PPGridTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGridTableViewController.h; sourceTree = "<group>"; };
 		1CF3597415922BD700161E33 /* PPGridTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPGridTableViewController.m; sourceTree = "<group>"; };
-		1CF359821592387000161E33 /* PPIdiotsReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; path = PPIdiotsReceiver.h; sourceTree = "<group>"; };
+		1CF359821592387000161E33 /* PPIdiotsReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPIdiotsReceiver.h; sourceTree = "<group>"; };
 		1CF359831592387000161E33 /* PPIdiotsReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPIdiotsReceiver.m; sourceTree = "<group>"; };
 		EF25BCB1158BB3960037E886 /* PPReceiving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPReceiving.h; sourceTree = "<group>"; };
 		EF25BCB3158F854A0037E886 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = ../RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };

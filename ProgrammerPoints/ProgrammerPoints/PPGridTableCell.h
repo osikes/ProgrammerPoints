@@ -20,9 +20,9 @@
 
 @property (nonatomic, strong) UIColor* lineColor;
 @property (nonatomic) BOOL topCell;
-@property (readonly) UIImageView* chosen;
-@property (readonly) UILabel* name;
-@property (readonly) UILabel* rank;
-@property (readonly) UILabel* points;
+@property (readonly) IBOutlet UIImageView* chosen;
+@property (readonly) IBOutlet UILabel* name;
+@property (readonly) IBOutlet UILabel* rank;
+@property (readonly) IBOutlet UILabel* points;
 
 @end

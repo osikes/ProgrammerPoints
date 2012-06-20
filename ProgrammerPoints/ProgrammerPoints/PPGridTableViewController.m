@@ -15,6 +15,12 @@
 
 @implementation PPGridTableViewController
 
+//@synthesize indicators = _indicators;
+@synthesize names = _names;
+@synthesize ranks = _ranks;
+@synthesize points = _points;
+@synthesize idiots = _idiots;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -27,6 +33,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    
+//    self.indicators = [[NSArray alloc] initWithObjects:
+//                       [UIImage imageNamed:@"tri.png"],
+//                       [UIImage imageNamed:@"dot.png"],
+//                       nil];
+    self.names = [[NSArray alloc] initWithObjects:@"Owen", @"Greg", @"Sean", @"Weston", @"Robert", nil];
+    self.ranks = [[NSArray alloc] initWithObjects:@"1", @"2", @"3", @"4", @"5", nil];
+    self.points = [[NSArray alloc] initWithObjects:@"9", @"8", @"7", @"6", @"5", nil];
+
+    // Turn off the tableView's default lines because we are drawing them all ourself
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -42,25 +60,21 @@
     // e.g. self.myOutlet = nil;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
-#pragma mark - Table view data source
+//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+//{
+//    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+//}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.names count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -88,12 +102,11 @@
     /////////////////////////////////////////////////////////////////////////
 
     
-    // Configure the cell.
-    cell.chosen.image = [NSString stringWithFormat:@"%i", indexPath.row];
-    cell.name.text = [NSString stringWithFormat:@"%i", indexPath.row];
-    cell.rank.text = [NSString stringWithFormat:@"%i", indexPath.row];
-    cell.points.text = @"Sample text";
-    
+    // Configure the cell. //currently only shows one option, just to get it working.
+    cell.chosen.image = [UIImage imageNamed:@"tri.png"];
+    cell.name.text = [NSString stringWithFormat:@"%@", [self.names objectAtIndex:0]];
+    cell.rank.text = [NSString stringWithFormat:@"%@", [self.ranks objectAtIndex:0]];
+    cell.points.text = [NSString stringWithFormat:@"%@", [self.points objectAtIndex:0]];    
     return cell;
 }
 
