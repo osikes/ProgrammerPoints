@@ -32,16 +32,39 @@
     RKObjectMapping* collectionMapping = [RKObjectMapping mappingForClass:[PPCollection class]];
     [collectionMapping mapKeyPath:@"Id" toAttribute:@"id"];
     [collectionMapping mapKeyPath:@"total" toAttribute:@"total"];
-    [collectionMapping mapKeyPath:@"points" toAttribute:@"points"];
-    [[RKObjectManager sharedManager].mappingProvider setMapping:collectionMapping forKeyPath:@"smartPoints"];
-    [[RKObjectManager sharedManager].mappingProvider setMapping:collectionMapping forKeyPath:@"stupidPoints"];
+    [collectionMapping mapKeyPath:@"points" toRelationship:@"points" withMapping:pointMapping];
+
     
     RKObjectMapping* idiotMapping = [RKObjectMapping mappingForClass:[PPIdiot class]];
     [idiotMapping mapKeyPath:@"Id" toAttribute:@"id"];
     [idiotMapping mapKeyPath:@"firstName" toAttribute:@"firstName"];
     [idiotMapping mapKeyPath:@"lastName" toAttribute:@"lastName"];
-    [idiotMapping mapKeyPath:@"smartPoints" toAttribute:@"smartPoints"];
-    [idiotMapping mapKeyPath:@"stupidPoints" toAttribute:@"stupidPoints"];
+    [idiotMapping mapKeyPath:@"smartPoints" toRelationship:@"smartPoints" withMapping:collectionMapping];
+    [idiotMapping mapKeyPath:@"stupidPoints" toRelationship:@"stupidPoints" withMapping:collectionMapping];
+    
+    
+    
+    RKObjectMapping* pointSerializationMapping = [RKObjectMapping mappingForClass:[NSMutableDictionary class]];
+    [pointSerializationMapping mapKeyPath:@"Id" toAttribute:@"id"];
+    [pointSerializationMapping mapKeyPath:@"date" toAttribute:@"date"];
+    [pointSerializationMapping mapKeyPath:@"description" toAttribute:@"description"];
+    [pointSerializationMapping mapKeyPath:@"value" toAttribute:@"value"];
+    [[RKObjectManager sharedManager].mappingProvider setSerializationMapping:pointSerializationMapping forClass:[PPPoint class]];
+    
+    RKObjectMapping* collectionSerializationMapping = [RKObjectMapping mappingForClass:[NSMutableDictionary class]];
+    [collectionSerializationMapping mapKeyPath:@"Id" toAttribute:@"id"];
+    [collectionSerializationMapping mapKeyPath:@"total" toAttribute:@"total"];
+    [collectionSerializationMapping mapKeyPath:@"points" toAttribute:@"points"];
+    [[RKObjectManager sharedManager].mappingProvider setSerializationMapping:collectionSerializationMapping forClass:[PPCollection class]];
+    
+    RKObjectMapping* idiotSerializationMapping = [RKObjectMapping mappingForClass:[NSMutableDictionary class]];
+    [idiotSerializationMapping mapKeyPath:@"Id" toAttribute:@"id"];
+    [idiotSerializationMapping mapKeyPath:@"firstName" toAttribute:@"firstName"];
+    [idiotSerializationMapping mapKeyPath:@"lastName" toAttribute:@"lastName"];
+    [idiotSerializationMapping mapKeyPath:@"smartPoints" toAttribute:@"smartPoints"];
+    [idiotSerializationMapping mapKeyPath:@"stupidPoints" toAttribute:@"stupidPoints"];
+    [[RKObjectManager sharedManager].mappingProvider setSerializationMapping:idiotSerializationMapping forClass:[PPIdiot class]];
+    
     
     return self;
 }
@@ -49,7 +72,9 @@
 - (void)request:(RKRequest*)request didLoadResponse:(RKResponse*)response { //callback after requests sent
     
     if ([request isGET]) { 
-        if ([response isOK]) {  }
+        if ([response isOK]) { 
+            if ( [delegate respondsToSelector:@selector(didReceiveObject:FromRequest:)] ) { }
+        }
     }
     
     else if ([request isPOST]) {
