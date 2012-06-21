@@ -2,11 +2,11 @@
 
 @implementation PPIdiotsReceiver
 
-- didReceiveObject:(id)object RequestId:(id) requestId
+- (void)didReceiveObject:(id)object FromRequest:(id) requestId
 {
     
 }
-- didReveiveError:(id)error RequestId:(id) requestId
+- (void)didReveiveError:(id)error FromRequest:(id) requestId
 {
     
 }

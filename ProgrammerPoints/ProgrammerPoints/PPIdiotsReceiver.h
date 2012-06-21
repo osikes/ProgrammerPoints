@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
-#import "PPReceiving.h"
+#import "PPReceiveDelegate.h"
 
-@interface PPIdiotsReceiver : NSObject <PPReceiving>
+@interface PPIdiotsReceiver : NSObject <PPReceiveDelegate>
 
 @end

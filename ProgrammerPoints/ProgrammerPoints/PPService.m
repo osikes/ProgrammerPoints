@@ -15,6 +15,7 @@
 
 @implementation PPService
 
+
 - (id) initWithBaseURL:(NSString *) baseURL {
     self = [super init];
     if (self != nil) {
@@ -59,6 +60,14 @@
         if ([response isNotFound]) { }
     }
     
+}
+
+- (id)delegate {
+    return delegate;
+}
+
+- (void) setDelegate:(id)newDelegate {
+    delegate = newDelegate;
 }
 
 @end
