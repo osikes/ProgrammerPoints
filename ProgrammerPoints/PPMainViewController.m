@@ -1,29 +1,31 @@
 //
-//  PPGridTableViewController.m
+//  PPMainViewController.m
 //  ProgrammerPoints
 //
-//  Created by wodom on 6/20/12.
+//  Created by wodom on 6/21/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-#import "PPGridTableViewController.h"
+#import "PPMainViewController.h"
 #import "PPGridTableCell.h"
 
-@interface PPGridTableViewController ()
+
+@interface PPMainViewController ()
 
 @end
 
-@implementation PPGridTableViewController
+@implementation PPMainViewController
 
-//@synthesize indicators = _indicators;
-@synthesize names = _names;
-@synthesize ranks = _ranks;
-@synthesize points = _points;
-@synthesize idiots = _idiots;
+@synthesize idiotTable;
+//@synthesize indicators;
+@synthesize names;
+@synthesize ranks;
+@synthesize points;
+@synthesize idiots;
 
-- (id)initWithStyle:(UITableViewStyle)style
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    self = [super initWithStyle:style];
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
     }
@@ -33,22 +35,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [super viewDidLoad];
     
     
-//    self.indicators = [[NSArray alloc] initWithObjects:
-//                       [UIImage imageNamed:@"tri.png"],
-//                       [UIImage imageNamed:@"dot.png"],
-//                       nil];
+    //    self.indicators = [[NSArray alloc] initWithObjects:
+    //                       [UIImage imageNamed:@"tri.png"],
+    //                       [UIImage imageNamed:@"dot.png"],
+    //                       nil];
     self.names = [[NSArray alloc] initWithObjects:@"Owen", @"Greg", @"Sean", @"Weston", @"Robert", nil];
     self.ranks = [[NSArray alloc] initWithObjects:@"1", @"2", @"3", @"4", @"5", nil];
     self.points = [[NSArray alloc] initWithObjects:@"9", @"8", @"7", @"6", @"5", nil];
-
+    
     // Turn off the tableView's default lines because we are drawing them all ourself
-    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
+    self.idiotTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-
+    
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
@@ -57,13 +60,7 @@
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
-
-//- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-//{
-//    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-//}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -75,6 +72,11 @@
 {
     // Return the number of rows in the section.
     return [self.names count];
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -100,7 +102,7 @@
     //// Add an if statement based on the stupid/smart segmented control ////
     //// Set image and texts based on the control state                  ////
     /////////////////////////////////////////////////////////////////////////
-
+    
     
     // Configure the cell. //currently only shows one option, just to get it working.
     cell.chosen.image = [UIImage imageNamed:@"tri.png"];
@@ -108,58 +110,6 @@
     cell.rank.text = [NSString stringWithFormat:@"%@", [self.ranks objectAtIndex: [indexPath row]]];
     cell.points.text = [NSString stringWithFormat:@"%@", [self.points objectAtIndex: [indexPath row]]];
     return cell;
-}
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
 }
 
 @end

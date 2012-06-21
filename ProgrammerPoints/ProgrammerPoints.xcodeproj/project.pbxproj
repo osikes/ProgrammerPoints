@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1C125CF815925B8F00CE2E71 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 1C125CF715925B8F00CE2E71 /* Notes */; };
+		1C56EE881593AEE300D9D1F4 /* PPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C56EE871593AEE300D9D1F4 /* PPMainViewController.m */; };
 		1CBE395F158A61BE006EAFB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBE395E158A61BE006EAFB8 /* UIKit.framework */; };
 		1CBE3961158A61BE006EAFB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBE3960158A61BE006EAFB8 /* Foundation.framework */; };
 		1CBE3963158A61BE006EAFB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBE3962158A61BE006EAFB8 /* CoreGraphics.framework */; };
@@ -99,6 +100,8 @@
 
 /* Begin PBXFileReference section */
 		1C125CF715925B8F00CE2E71 /* Notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Notes; path = ../Notes; sourceTree = "<group>"; };
+		1C56EE861593AEE300D9D1F4 /* PPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPMainViewController.h; sourceTree = "<group>"; };
+		1C56EE871593AEE300D9D1F4 /* PPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPMainViewController.m; sourceTree = "<group>"; };
 		1CBE395A158A61BE006EAFB8 /* ProgrammerPoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammerPoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBE395E158A61BE006EAFB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1CBE3960158A61BE006EAFB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -182,15 +185,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C125CF915925C0500CE2E71 /* CustonTable */ = {
+		1C125CF915925C0500CE2E71 /* Subclasses */ = {
 			isa = PBXGroup;
 			children = (
 				1CD840BB15921A8200B79763 /* PPGridTableCell.h */,
 				1CD840BC15921A8200B79763 /* PPGridTableCell.m */,
 				1CF3597315922BD700161E33 /* PPGridTableViewController.h */,
 				1CF3597415922BD700161E33 /* PPGridTableViewController.m */,
+				1C56EE861593AEE300D9D1F4 /* PPMainViewController.h */,
+				1C56EE871593AEE300D9D1F4 /* PPMainViewController.m */,
 			);
-			name = CustonTable;
+			name = Subclasses;
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -242,7 +247,7 @@
 				1CBE396E158A61BE006EAFB8 /* AppDelegate.m */,
 				1C125CF715925B8F00CE2E71 /* Notes */,
 				1CBE3991158A66CE006EAFB8 /* MainStoryboard.storyboard */,
-				1C125CF915925C0500CE2E71 /* CustonTable */,
+				1C125CF915925C0500CE2E71 /* Subclasses */,
 				1CF359821592387000161E33 /* PPIdiotsReceiver.h */,
 				1CF359831592387000161E33 /* PPIdiotsReceiver.m */,
 				1CBE3965158A61BE006EAFB8 /* Supporting Files */,
@@ -516,6 +521,7 @@
 				1CD840BD15921A8200B79763 /* PPGridTableCell.m in Sources */,
 				1CF3597515922BD700161E33 /* PPGridTableViewController.m in Sources */,
 				1CF359841592387000161E33 /* PPIdiotsReceiver.m in Sources */,
+				1C56EE881593AEE300D9D1F4 /* PPMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

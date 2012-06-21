@@ -9,8 +9,9 @@
 #import "PPGridTableCell.h"
 
 #define cellHeight 44
-#define cell1Width 140 
-#define cell2Width 70
+#define indicatorWidth 35
+#define cell1Width 121
+#define cell2Width 50
 
 @implementation PPGridTableCell
 
@@ -31,11 +32,11 @@
 	CGContextSetLineWidth(context, 1.0);
     
 	// Add the vertical lines
-	CGContextMoveToPoint(context, cell1Width+0.5, 0);
-	CGContextAddLineToPoint(context, cell1Width+0.5, rect.size.height);
+	CGContextMoveToPoint(context, indicatorWidth+cell1Width+0.5, 0);
+	CGContextAddLineToPoint(context, indicatorWidth+cell1Width+0.5, rect.size.height);
     
-	CGContextMoveToPoint(context, cell1Width+cell2Width+0.5, 0);
-	CGContextAddLineToPoint(context, cell1Width+cell2Width+0.5, rect.size.height);
+	CGContextMoveToPoint(context, indicatorWidth+cell1Width+cell2Width+0.5, 0);
+	CGContextAddLineToPoint(context, indicatorWidth+cell1Width+cell2Width+0.5, rect.size.height);
     
 	// Add bottom line
 	CGContextMoveToPoint(context, 0, rect.size.height);
@@ -56,21 +57,21 @@
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
-        chosen = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, cell1Width, cellHeight)];
+        chosen = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, indicatorWidth, cellHeight)];
         chosen.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
         [self addSubview:chosen];
         
-        name = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, cell1Width, cellHeight)];
+        name = [[UILabel alloc] initWithFrame:CGRectMake(indicatorWidth, 0, cell1Width, cellHeight)];
         name.textAlignment = UITextAlignmentCenter;
         name.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
         [self addSubview:name];
         
-        rank = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, cell1Width, cellHeight)];
+        rank = [[UILabel alloc] initWithFrame:CGRectMake(indicatorWidth+cell1Width, 0, cell2Width, cellHeight)];
         rank.textAlignment = UITextAlignmentCenter;
         rank.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
         [self addSubview:rank];
         
-        points = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, cell1Width, cellHeight)];
+        points = [[UILabel alloc] initWithFrame:CGRectMake(indicatorWidth+cell1Width+cell2Width, 0, cell2Width, cellHeight)];
         points.textAlignment = UITextAlignmentCenter;
         points.backgroundColor = [UIColor clearColor]; // Important to set or lines will not appear
         [self addSubview:points];
