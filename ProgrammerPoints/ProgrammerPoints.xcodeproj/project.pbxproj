@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C125CF815925B8F00CE2E71 /* Notes in Resources */ = {isa = PBXBuildFile; fileRef = 1C125CF715925B8F00CE2E71 /* Notes */; };
 		1CBE395F158A61BE006EAFB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBE395E158A61BE006EAFB8 /* UIKit.framework */; };
 		1CBE3961158A61BE006EAFB8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBE3960158A61BE006EAFB8 /* Foundation.framework */; };
 		1CBE3963158A61BE006EAFB8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CBE3962158A61BE006EAFB8 /* CoreGraphics.framework */; };
@@ -97,6 +98,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C125CF715925B8F00CE2E71 /* Notes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Notes; path = ../Notes; sourceTree = "<group>"; };
 		1CBE395A158A61BE006EAFB8 /* ProgrammerPoints.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProgrammerPoints.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CBE395E158A61BE006EAFB8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1CBE3960158A61BE006EAFB8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -131,10 +133,10 @@
 		1CC415FD158B83FB00ED1A93 /* tri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tri.png; sourceTree = "<group>"; };
 		1CC41606158B865000ED1A93 /* Gotham-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Bold.otf"; sourceTree = "<group>"; };
 		1CC41607158B865000ED1A93 /* Gotham-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Medium.otf"; sourceTree = "<group>"; };
-		1CD840BB15921A8200B79763 /* PPGridTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGridTableCell.h; sourceTree = "<group>"; };
-		1CD840BC15921A8200B79763 /* PPGridTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPGridTableCell.m; sourceTree = "<group>"; };
-		1CF3597315922BD700161E33 /* PPGridTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPGridTableViewController.h; sourceTree = "<group>"; };
-		1CF3597415922BD700161E33 /* PPGridTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPGridTableViewController.m; sourceTree = "<group>"; };
+		1CD840BB15921A8200B79763 /* PPGridTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGridTableCell.h; path = ProgrammerPoints/PPGridTableCell.h; sourceTree = "<group>"; };
+		1CD840BC15921A8200B79763 /* PPGridTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPGridTableCell.m; path = ProgrammerPoints/PPGridTableCell.m; sourceTree = "<group>"; };
+		1CF3597315922BD700161E33 /* PPGridTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PPGridTableViewController.h; path = ProgrammerPoints/PPGridTableViewController.h; sourceTree = "<group>"; };
+		1CF3597415922BD700161E33 /* PPGridTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PPGridTableViewController.m; path = ProgrammerPoints/PPGridTableViewController.m; sourceTree = "<group>"; };
 		1CF359821592387000161E33 /* PPIdiotsReceiver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPIdiotsReceiver.h; sourceTree = "<group>"; };
 		1CF359831592387000161E33 /* PPIdiotsReceiver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PPIdiotsReceiver.m; sourceTree = "<group>"; };
 		EF25BCB1158BB3960037E886 /* PPReceiving.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PPReceiving.h; sourceTree = "<group>"; };
@@ -180,6 +182,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C125CF915925C0500CE2E71 /* CustonTable */ = {
+			isa = PBXGroup;
+			children = (
+				1CD840BB15921A8200B79763 /* PPGridTableCell.h */,
+				1CD840BC15921A8200B79763 /* PPGridTableCell.m */,
+				1CF3597315922BD700161E33 /* PPGridTableViewController.h */,
+				1CF3597415922BD700161E33 /* PPGridTableViewController.m */,
+			);
+			name = CustonTable;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		1CBE394F158A61BE006EAFB8 = {
 			isa = PBXGroup;
 			children = (
@@ -226,13 +240,11 @@
 				1CBE3998158A6E1B006EAFB8 /* Entities */,
 				1CBE396D158A61BE006EAFB8 /* AppDelegate.h */,
 				1CBE396E158A61BE006EAFB8 /* AppDelegate.m */,
+				1C125CF715925B8F00CE2E71 /* Notes */,
 				1CBE3991158A66CE006EAFB8 /* MainStoryboard.storyboard */,
+				1C125CF915925C0500CE2E71 /* CustonTable */,
 				1CF359821592387000161E33 /* PPIdiotsReceiver.h */,
 				1CF359831592387000161E33 /* PPIdiotsReceiver.m */,
-				1CD840BB15921A8200B79763 /* PPGridTableCell.h */,
-				1CD840BC15921A8200B79763 /* PPGridTableCell.m */,
-				1CF3597315922BD700161E33 /* PPGridTableViewController.h */,
-				1CF3597415922BD700161E33 /* PPGridTableViewController.m */,
 				1CBE3965158A61BE006EAFB8 /* Supporting Files */,
 			);
 			path = ProgrammerPoints;
@@ -460,6 +472,7 @@
 				1CC41603158B83FB00ED1A93 /* tri.png in Resources */,
 				1CC41608158B865000ED1A93 /* Gotham-Bold.otf in Resources */,
 				1CC41609158B865000ED1A93 /* Gotham-Medium.otf in Resources */,
+				1C125CF815925B8F00CE2E71 /* Notes in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

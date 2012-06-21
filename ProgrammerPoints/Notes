@@ -1,0 +1,3 @@
+- google embedding a TableView inside of a regular view
+- how to subclass the table view
+- how to connect the subclassed table view, regular view, and table view controller
