@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol PPReceiving <NSObject>
+@protocol PPReceiving
 
 - didReceiveObject:(id)object RequestId:(id) requestId;
 - didReveiveError:(id)error RequestId:(id) requestId;
