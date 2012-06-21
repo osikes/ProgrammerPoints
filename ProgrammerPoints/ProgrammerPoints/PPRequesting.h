@@ -9,18 +9,17 @@
 #import <Foundation/Foundation.h>
 #import "PPIdiot.h"
 #import "PPPoint.h"
-#import "PPReceiving.h"
+#import "PPReceiveDelegate.h"
 
-@protocol PPRequesting <NSObject>
+@protocol PPRequesting
 
-//- getIdiotsNotify:(PPReceiving *) receiver;
-//- getIdiotWWithFirstName:(NSString *)firstName LastName:(NSString *)lastName Notify:(PPReceiving *) receiver;
-//- addIdiotWithFirstName:(NSString *)firstName LastName:(NSString *)lastName Notify:(PPReceiving *) receiver;
-//- removeIdiotWithID:(NSString *)idiotID Notify:(PPReceiving *) receiver;
-//- addStupidPoint:(PPPoint *) point ToIdiot:(NSString *) idiotID Notify:(PPReceiving *) receiver;
-//- addSmartPoint:(PPPoint *) point ToIdiot:(NSString *) idiotID Notify:(PPReceiving *) receiver;
-//- resetAllPointsNotify:(PPReceiving *) receiver;
-//- resetPointsFromID:(NSString *)idiotID Notify:(PPReceiving *) receiver;
-
+- (void)getIdiots;
+- (void)getIdiotWWithFirstName:(NSString *)firstName LastName:(NSString *)lastName;
+- (void)addIdiotWithFirstName:(NSString *)firstName LastName:(NSString *)lastName;
+- (void)removeIdiotWithID:(NSString *)idiotID;
+- (void)addStupidPoint:(PPPoint *) point ToIdiot:(NSString *) idiotID;
+- (void)addSmartPoint:(PPPoint *) point ToIdiot:(NSString *) idiotID;
+- (void)resetAllPoints;
+- (void)resetPointsFromID:(NSString *)idiotID;
 
 @end

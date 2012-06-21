@@ -10,6 +10,13 @@
 #import <RestKit/RestKit.h>
 #import "PPRequesting.h"
 
-@interface PPService : NSObject <RKRequestDelegate, PPRequesting>
+@interface PPService : NSObject <RKRequestDelegate, PPRequesting> {
+    id delegate;
+}
+
+@property (strong, nonatomic) id delegate;
+
+- (id)delegate;
+- (void)setDelegate:(id)newDelegate;
 
 @end
