@@ -1,3 +1,15 @@
-- google embedding a TableView inside of a regular view
-- how to subclass the table view
-- how to connect the subclassed table view, regular view, and table view controller
+- gridlines not completely working in PPGridTableCell.m (comment above relevant section)
+
+- add second set of mock/static data to use for populating the table.
+- add an if statement based on the segmented control that will choose which set of arrays to pull info from.
+
+- add arrays for the indicator images.
+
+- make the green arrow/blue dot only show up for the selected idiot, and remove the default blue highlighting.
+
+- add title headings for the table columns.
+
+- subclass navigation bar so that it has the right image/background and isn't blue.
+
+- subclass the switch so that it also looks right (probably similar to the navigation bar part).
+

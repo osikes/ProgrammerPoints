@@ -22,6 +22,9 @@
 @synthesize rank;
 @synthesize points;
 
+//
+// Not drawing bottom line for some reason...
+//
 - (void)drawRect:(CGRect)rect //overloading drawRect to use the grid with lines
 {
 	CGContextRef context = UIGraphicsGetCurrentContext();
@@ -32,11 +35,15 @@
 	CGContextSetLineWidth(context, 1.0);
     
 	// Add the vertical lines
-	CGContextMoveToPoint(context, indicatorWidth+cell1Width+0.5, 0);
-	CGContextAddLineToPoint(context, indicatorWidth+cell1Width+0.5, rect.size.height);
     
-	CGContextMoveToPoint(context, indicatorWidth+cell1Width+cell2Width+0.5, 0);
-	CGContextAddLineToPoint(context, indicatorWidth+cell1Width+cell2Width+0.5, rect.size.height);
+    CGContextMoveToPoint(context, indicatorWidth+cell1Width+12+0.5, 0); //sets inital position (+12 is to account for layout padding)
+	CGContextAddLineToPoint(context, indicatorWidth+cell1Width+12+0.5, rect.size.height); //draws line down from there
+    
+	CGContextMoveToPoint(context, indicatorWidth+cell1Width+cell2Width+20+0.5, 0); // sets second start point
+	CGContextAddLineToPoint(context, indicatorWidth+cell1Width+cell2Width+20+0.5, rect.size.height); //draws another vertical line
+    
+    CGContextMoveToPoint(context, 279, 0); // sets final start point
+	CGContextAddLineToPoint(context, 279, rect.size.height); //draws final vertical line
     
 	// Add bottom line
 	CGContextMoveToPoint(context, 0, rect.size.height);

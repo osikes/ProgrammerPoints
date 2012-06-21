@@ -35,7 +35,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [super viewDidLoad];
     
     
     //    self.indicators = [[NSArray alloc] initWithObjects:
@@ -81,7 +80,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell"; // make sure this is the same as in storyboard
+    static NSString *CellIdentifier = @"GridCell"; // make sure this is the same as in storyboard
     
     PPGridTableCell *cell = (PPGridTableCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
