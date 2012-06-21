@@ -22,5 +22,4 @@
 - (void)resetAllPointsNotify:(PPReceiving *) receiver;
 - (void)resetPointsFromID:(NSString *)idiotID Notify:(PPReceiving *) receiver;
 
-
 @end
