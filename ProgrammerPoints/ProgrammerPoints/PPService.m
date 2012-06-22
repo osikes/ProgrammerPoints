@@ -27,20 +27,19 @@
     [pointMapping mapKeyPath:@"date" toAttribute:@"date"];
     [pointMapping mapKeyPath:@"description" toAttribute:@"description"];
     [pointMapping mapKeyPath:@"value" toAttribute:@"value"];
-    //[[RKObjectManager sharedManager].mappingProvider setMapping:pointMapping forKeyPath:@"points"];
     
     RKObjectMapping* collectionMapping = [RKObjectMapping mappingForClass:[PPCollection class]];
     [collectionMapping mapKeyPath:@"Id" toAttribute:@"id"];
     [collectionMapping mapKeyPath:@"total" toAttribute:@"total"];
     [collectionMapping mapKeyPath:@"points" toRelationship:@"points" withMapping:pointMapping];
 
-    
     RKObjectMapping* idiotMapping = [RKObjectMapping mappingForClass:[PPIdiot class]];
     [idiotMapping mapKeyPath:@"Id" toAttribute:@"id"];
     [idiotMapping mapKeyPath:@"firstName" toAttribute:@"firstName"];
     [idiotMapping mapKeyPath:@"lastName" toAttribute:@"lastName"];
     [idiotMapping mapKeyPath:@"smartPoints" toRelationship:@"smartPoints" withMapping:collectionMapping];
     [idiotMapping mapKeyPath:@"stupidPoints" toRelationship:@"stupidPoints" withMapping:collectionMapping];
+    [[RKObjectManager sharedManager].mappingProvider addObjectMapping:idiotMapping];
     
     
     
@@ -65,27 +64,39 @@
     [idiotSerializationMapping mapKeyPath:@"stupidPoints" toAttribute:@"stupidPoints"];
     [[RKObjectManager sharedManager].mappingProvider setSerializationMapping:idiotSerializationMapping forClass:[PPIdiot class]];
     
+    [RKObjectManager sharedManager].serializationMIMEType = RKMIMETypeJSON;
+    
     
     return self;
 }
 
-- (void)request:(RKRequest*)request didLoadResponse:(RKResponse*)response { //callback after requests sent
-    
-    if ([request isGET]) { 
-        if ([response isOK]) { 
-            if ( [delegate respondsToSelector:@selector(didReceiveObject:FromRequest:)] ) { }
-        }
-    }
-    
-    else if ([request isPOST]) {
-        if ([response isJSON]) { }
-    }
-    
-    else if ([request isDELETE]) {
-        if ([response isNotFound]) { }
-    }
-    
+-(void)getIdiots {
+    RKObjectMapping* idiotMapping = [[RKObjectManager sharedManager].mappingProvider objectMappingForClass:[PPIdiot class]];
+    [[RKObjectManager sharedManager] loadObjectsAtResourcePath:@"/" objectMapping:idiotMapping delegate:self];
 }
+
+- (void)objectLoader:(RKObjectLoader*)objectLoader didLoadObjects:(NSArray*)objects {
+    if ( [delegate respondsToSelector:@selector(didReceiveObject:FromRequest:)] ) { }
+    [delegate didReceiveObject:objects FromRequest:nil];
+}
+
+//- (void)request:(RKRequest*)request didLoadResponse:(RKResponse*)response { //callback after requests sent
+//    
+//    if ([request isGET]) { 
+//        if ([response isOK]) { 
+//            if ( [delegate respondsToSelector:@selector(didReceiveObject:FromRequest:)] ) { }
+//        }
+//    }
+//    
+//    else if ([request isPOST]) {
+//        if ([response isJSON]) { }
+//    }
+//    
+//    else if ([request isDELETE]) {
+//        if ([response isNotFound]) { }
+//    }
+//    
+//}
 
 - (id)delegate {
     return delegate;
